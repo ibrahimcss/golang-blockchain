@@ -11,6 +11,8 @@ type Block struct {
 	Nonce    int
 }
 
+//Kontrol için
+
 func CreateBlock(data string, prevHash []byte) *Block {
 	block := &Block{[]byte{}, []byte(data), prevHash, 0}
 	pow := NewProof(block)
